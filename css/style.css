@@ -1,35 +1,31 @@
-/* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* =========================================================
+   GOOGLE FONTS
+   ========================================================= */
 
-/* ----------- CSS Variables ---------- */
-:root {
-    --walnut: #3E2723;
-    --sienna: #C2410C;
-    --terracotta: #E2725B;
-    --sand: #F6E7D8;
-    --cream: #FDF6EE;
-    --gold: #D9A441;
-    --font-script: 'Great Vibes', cursive;
-    --font-body: 'Poppins', sans-serif;
-    --shadow: 0 8px 24px rgba(62, 39, 35, 0.12);
-    --transition: all 0.3s ease;
-}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* ---------- Reset & Base ----------- */
-*{
+
+/* =========================================================
+   GENERAL STYLES & RESETS
+   ========================================================= */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html {
+    font-size: 10px;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-body);
-    background-color: var(--cream);
-    color: var(--walnut);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDF6EE;
+    color: #3E2723;
     overflow-x: hidden;
 }
 
@@ -44,115 +40,128 @@ a {
     color: inherit;
 }
 
-h1, h2, h3 {
-    font-weight: 600;
-    line-height: 1.2;
-
+ul {
+    list-style: none;
 }
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 
 .container {
-    width: min(1150px, 92%);
-    margin-inline: auto;
+    width: 92%;
+    max-width: 1150px;
+    margin: 0 auto;
 }
 
-.section{
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
     padding: 5rem 0;
 }
 
-.section-title{
-    font-size: 2rem;
+.section-title {
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5em;
 }
 
-.section-sub{
+.section-sub {
     text-align: center;
-    color: #8a6d58;
+    color: #8A6D58;
     max-width: 620px;
     margin: 0 auto 3rem;
-    letter-spacing: 0.4px;
 }
- 
+
 .script {
-    font-family: var(--font-script);
-    font-size: 2.6rem;
-    font-weight: var(--sienna);
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #C2410C;
 }
 
-/* ---------- SVG decorative ----------- */
-.svg-medallion {
-    width: 90px;
-    height: 90px;
-    margin: 0 auto 0.5rem;
-    stroke: var(--sienna);
-    fill: none;
-    stroke-width: 1.5;
-}
 
-/* -------- Buttons --------- */
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
-    border-radius: 50px;
-    font-family: var(--font-body);
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    border: none;
+    font-size: 1.3rem;
+    border: 2px solid #C2410C;
     cursor: pointer;
-    transition: var(--transition);
 }
 
 .btn-primary {
-    background: var(--sienna);
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(194, 65, 12, 0.35);
+    background-color: #C2410C;
+    color: white;
 }
 
 .btn-primary:hover {
-    background: var(--walnut);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 26px rgba(62, 39, 35, 0.4);
+    background-color: #3E2723;
+    border-color: #3E2723;
 }
 
 .btn-outline {
-    background: transparent;
-    color: var(--sienna);
-    border: 2px solid var(--sienna);
+    background-color: transparent;
+    color: #C2410C;
 }
 
 .btn-outline:hover {
-    background: var(--sienna);
-    color: #fff;
-    transform: translateY(-3px);
+    background-color: #C2410C;
+    color: white;
 }
 
-/* -------- Header & Nav --------- */
+
+/* =========================================================
+   HEADER & NAVIGATION
+   CSS GRID
+   ========================================================= */
+
 header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(253, 246, 238, 0.92);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 12px rgba(62, 39, 35, 0.0);
+    background-color: #FDF6EE;
+    box-shadow: 0 2px 10px rgba(62, 39, 35, 0.12);
 }
 
 .navbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
-    padding: 1rem 0;
+    gap: 2rem;
+    padding: 1.5rem 0;
 }
 
 .logo {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     align-items: center;
     gap: 0.6rem;
-    font-family: var(--font-script);
-    font-size: 1.9rem;
-    color: var(--sienna);
-    letter-spacing: 1px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #C2410C;
 }
 
 .logo svg {
@@ -161,137 +170,115 @@ header {
 }
 
 .nav-links {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, auto));
+    justify-content: center;
     gap: 2rem;
-    list-style: none;
 }
 
 .nav-links a {
+    font-size: 1.5rem;
     font-weight: 500;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    position: relative;
-    padding-bottom: 4px;
+    padding: 0.5rem;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: var(--sienna);
-    transition: var(--transition);
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after {
-    width: 100%;
+.nav-links a:hover,
+.nav-links a.active {
+    color: #C2410C;
 }
 
 .nav-toggle {
     display: none;
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     cursor: pointer;
-    color: var(--walnut);
+    color: #3E2723;
 }
 
-/* --------- Hero ------------ */
+
+/* =========================================================
+   HERO
+   CSS GRID
+   ========================================================= */
+
 .hero {
-    background: linear-gradient(135deg, var(--sand), var(--cream));
-    padding: 4rem 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: url('images/home.svg') no-repeat right center / 45%; 
-    opacity: 0.15;
-    pointer-events: none;
+    background: linear-gradient(135deg, #F6E7D8, #FDF6EE);
+    padding: 6rem 0;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
     align-items: center;
 }
 
 .hero-badge {
     display: inline-block;
-    background: var(--terracotta);
-    color: #fff;
-    padding: 0.35rem 1rem;
+    background-color: #E2725B;
+    color: white;
+    padding: 0.4rem 1.2rem;
     border-radius: 30px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 4.5rem;
     margin-bottom: 1rem;
 }
 
 .hero h1 .script {
     display: block;
-    font-size: 3.6rem;
+    font-size: 5rem;
 }
 
 .hero p {
-    font-size: 1.05rem;
-    color: #6b5344;
+    font-size: 1.7rem;
+    color: #6B5344;
     margin-bottom: 2rem;
-    max-width: 480px;
+    max-width: 500px;
 }
 
 .hero-actions {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .hero-art {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
 }
 
 .hero-art svg {
     width: 100%;
     max-width: 420px;
-    height: auto;
-    filter: drop-shadow(0 10px 20px rgba(194, 65, 12, 0.25));
 }
 
-/* Medallion draw-in animation */
-#medallion {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
-    animation: draw 4s ease forwards;
+
+/* =========================================================
+   DECORATIVE SVG
+   ========================================================= */
+
+.svg-medallion {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 0.5rem;
+    stroke: #C2410C;
+    fill: none;
+    stroke-width: 1.5;
 }
 
-@keyframes draw {
-    to { stroke-dashoffset: 0; }
-}
 
-#medallion .petal {
-    transform-origin: center;
-    animation: spin 30s linear infinite;
-}
+/* =========================================================
+   SERVICES
+   CSS GRID
+   ========================================================= */
 
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* ---------- Service Cards ---------- */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -299,25 +286,22 @@ header {
 }
 
 .card {
-    background: #fff;
-    border-radius: 18px;
+    background-color: white;
+    border-radius: 10px;
     padding: 2rem;
     text-align: center;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(194, 65, 12, 0.1);
+    border: 2px solid #F6E7D8;
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 36px rgba(62, 39, 35, 0.16);
+    border-color: #C2410C;
 }
 
 .card-icon {
     width: 70px;
     height: 70px;
     margin: 0 auto 1rem;
-    background: var(--sand);
+    background-color: #F6E7D8;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -326,25 +310,30 @@ header {
 .card-icon svg {
     width: 36px;
     height: 36px;
-    stroke: var(--sienna);
+    stroke: #C2410C;
     fill: none;
     stroke-width: 1.6;
 }
 
 .card h3 {
-    font-family: var(--font-script);
-    font-size: 1.8rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
     font-weight: 400;
-    color: var(--sienna);
+    color: #C2410C;
     margin-bottom: 0.6rem;
 }
 
 .card p {
-    font-size: 0.92rem;
-    color: #6b5344;
+    font-size: 1.4rem;
+    color: #6B5344;
 }
 
-/* ---------- Booking Steps ---------- */
+
+/* =========================================================
+   BOOKING STEPS
+   CSS GRID
+   ========================================================= */
+
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -353,34 +342,37 @@ header {
 
 .step {
     text-align: center;
-    position: relative;
 }
 
 .step-num {
     width: 56px;
     height: 56px;
     margin: 0 auto 1rem;
-    background: var(--sienna);
-    color: #fff;
+    background-color: #C2410C;
+    color: white;
     border-radius: 50%;
     display: grid;
     place-items: center;
     font-weight: 700;
-    font-size: 1.3rem;
-    box-shadow: 0 6px 16px rgba(194, 65, 12, 0.35);
+    font-size: 1.8rem;
 }
 
 .step h3 {
-    font-size: 1.05rem;
+    font-size: 1.7rem;
     margin-bottom: 0.4rem;
 }
 
 .step p {
-    font-size: 0.85rem;
-    color: #6b5344;
+    font-size: 1.4rem;
+    color: #6B5344;
 }
 
-/* ---------- Testimonials / Reviews ---------- */
+
+/* =========================================================
+   TESTIMONIALS
+   CSS GRID
+   ========================================================= */
+
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -388,33 +380,32 @@ header {
 }
 
 .review {
-    background: #fff;
-    border-radius: 18px;
+    background-color: white;
+    border-radius: 10px;
     padding: 2rem;
-    border: 1px solid rgba(194, 65, 12, 0.1);
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    border: 2px solid #F6E7D8;
 }
 
 .review:hover {
-    transform: translateY(-6px);
+    border-color: #C2410C;
 }
 
 .review-stars {
-    color: var(--gold);
+    color: #D9A441;
     letter-spacing: 3px;
     margin-bottom: 1rem;
 }
 
 .review p {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
     font-style: italic;
-    color: #5a463a;
+    color: #5A463A;
     margin-bottom: 1.2rem;
 }
 
 .review-author {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     gap: 0.8rem;
 }
@@ -423,49 +414,58 @@ header {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-    background: var(--sand);
+    background-color: #F6E7D8;
     display: grid;
     place-items: center;
     font-weight: 600;
-    color: var(--sienna);
+    color: #C2410C;
 }
 
 .review-author strong {
     display: block;
-    font-size: 0.95rem;
+    font-size: 1.5rem;
 }
 
 .review-author span {
-    font-size: 0.8rem;
-    color: #8a6d58;
+    font-size: 1.2rem;
+    color: #8A6D58;
 }
 
-/* ---------- Shop / Store ---------- */
+
+/* =========================================================
+   SHOP FILTERS
+   ========================================================= */
+
 .shop-filters {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
     margin-bottom: 3rem;
 }
 
 .filter-btn {
     padding: 0.6rem 1.5rem;
     border-radius: 30px;
-    border: 2px solid var(--sienna);
-    background: transparent;
-    color: var(--sienna);
-    font-family: var(--font-body);
+    border: 2px solid #C2410C;
+    background-color: transparent;
+    color: #C2410C;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     cursor: pointer;
-    transition: var(--transition);
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: var(--sienna);
-    color: #fff;
+    background-color: #C2410C;
+    color: white;
 }
+
+
+/* =========================================================
+   SHOP / PRODUCTS
+   CSS GRID
+   ========================================================= */
 
 .shop-grid {
     display: grid;
@@ -474,22 +474,19 @@ header {
 }
 
 .product-card {
-    background: #fff;
-    border-radius: 18px;
+    background-color: white;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(194, 65, 12, 0.1);
+    border: 2px solid #F6E7D8;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 36px rgba(62, 39, 35, 0.16);
+    border-color: #C2410C;
 }
 
 .product-img {
     height: 220px;
-    background: var(--sand);
+    background-color: #F6E7D8;
     display: grid;
     place-items: center;
     overflow: hidden;
@@ -499,23 +496,17 @@ header {
 .product-img svg {
     width: 120px;
     height: 120px;
-    transition: var(--transition);
-}
-
-.product-card:hover .product-img svg {
-    transform: scale(1.1);
 }
 
 .product-tag {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: var(--sienna);
-    color: #fff;
+    background-color: #C2410C;
+    color: white;
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
-    font-size: 0.75rem;
-    letter-spacing: 0.5px;
+    font-size: 1.2rem;
 }
 
 .product-body {
@@ -524,26 +515,31 @@ header {
 }
 
 .product-body h3 {
-    font-family: var(--font-script);
-    font-size: 1.7rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
     font-weight: 400;
-    color: var(--sienna);
+    color: #C2410C;
 }
 
 .product-body p {
-    font-size: 0.9rem;
-    color: #6b5344;
+    font-size: 1.4rem;
+    color: #6B5344;
     margin: 0.5rem 0 1rem;
 }
 
 .product-price {
     font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--walnut);
+    font-size: 1.8rem;
+    color: #3E2723;
     margin-bottom: 1rem;
 }
 
-/* ---------- Product Detail Page ---------- */
+
+/* =========================================================
+   PRODUCT DETAIL
+   CSS GRID
+   ========================================================= */
+
 .product-detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -552,8 +548,8 @@ header {
 }
 
 .detail-gallery {
-    background: var(--sand);
-    border-radius: 18px;
+    background-color: #F6E7D8;
+    border-radius: 10px;
     padding: 3rem;
     display: grid;
     place-items: center;
@@ -565,19 +561,19 @@ header {
 }
 
 .detail-info h1 {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     margin-bottom: 0.5rem;
 }
 
 .detail-info .price {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: var(--sienna);
+    color: #C2410C;
     margin: 1rem 0;
 }
 
 .detail-info .desc {
-    color: #5a463a;
+    color: #5A463A;
     margin-bottom: 1.5rem;
 }
 
@@ -588,25 +584,30 @@ header {
 
 .specs li {
     padding: 0.6rem 0;
-    border-bottom: 1px dashed rgba(194, 65, 12, 0.3);
-    display: flex;
+    border-bottom: 1px dashed #E2725B;
+    display: grid;
+    grid-template-columns: 110px 1fr;
     gap: 0.8rem;
-    align-items: baseline;
 }
 
 .specs li strong {
-    min-width: 110px;
-    color: var(--sienna);
+    color: #C2410C;
 }
+
+
+/* =========================================================
+   TABS
+   ========================================================= */
 
 .tabs {
     margin-top: 2rem;
 }
 
 .tab-btns {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
     gap: 0.5rem;
-    border-bottom: 2px solid var(--sand);
+    border-bottom: 2px solid #F6E7D8;
     margin-bottom: 1.5rem;
 }
 
@@ -614,31 +615,33 @@ header {
     padding: 0.6rem 1.2rem;
     background: none;
     border: none;
-    font-family: var(--font-body);
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     cursor: pointer;
-    color: #8a6d58;
-    border-bottom: 3px solid transparent;
-    margin-bottom: -2px;
-    transition: var(--transition);
+    color: #8A6D58;
 }
 
 .tab-btn.active {
-    color: var(--sienna);
-    border-bottom-color: var(--sienna);
+    color: #C2410C;
+    border-bottom: 3px solid #C2410C;
 }
 
 .tab-panel {
     display: none;
-    color: #5a463a;
-    font-size: 0.95rem;
+    color: #5A463A;
+    font-size: 1.5rem;
 }
 
 .tab-panel.active {
     display: block;
 }
 
-/* ---------- About ---------- */
+
+/* =========================================================
+   ABOUT
+   CSS GRID
+   ========================================================= */
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -647,12 +650,11 @@ header {
 }
 
 .about-art {
-    background: var(--sand);
-    border-radius: 18px;
+    background-color: #F6E7D8;
+    border-radius: 10px;
     padding: 3rem;
     display: grid;
     place-items: center;
-    position: relative;
 }
 
 .about-art svg {
@@ -661,12 +663,12 @@ header {
 }
 
 .about-text h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .about-text p {
-    color: #5a463a;
+    color: #5A463A;
     margin-bottom: 1.2rem;
 }
 
@@ -678,29 +680,23 @@ header {
 }
 
 .pull-quote {
-    background: var(--walnut);
-    color: var(--cream);
+    background-color: #3E2723;
+    color: #FDF6EE;
     padding: 3rem;
-    border-radius: 18px;
+    border-radius: 10px;
     text-align: center;
-    font-family: var(--font-script);
-    font-size: 2.2rem;
-    line-height: 1.6;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    line-height: 1.5;
     margin-top: 4rem;
-    position: relative;
 }
 
-.pull-quote::before {
-    content: '\201C';
-    font-size: 6rem;
-    position: absolute;
-    top: 0.5rem;
-    left: 2rem;
-    color: var(--sienna);
-    opacity: 0.6;
-}
 
-/* ---------- Contact ---------- */
+/* =========================================================
+   CONTACT
+   CSS GRID
+   ========================================================= */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -708,10 +704,10 @@ header {
 }
 
 .contact-form {
-    background: #fff;
-    border-radius: 18px;
+    background-color: white;
+    border-radius: 10px;
     padding: 2.5rem;
-    box-shadow: var(--shadow);
+    border: 2px solid #F6E7D8;
 }
 
 .contact-form h2 {
@@ -726,7 +722,7 @@ header {
     display: block;
     font-weight: 500;
     margin-bottom: 0.4rem;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
 }
 
 .form-group input,
@@ -734,20 +730,18 @@ header {
 .form-group textarea {
     width: 100%;
     padding: 0.8rem 1rem;
-    border: 1.5px solid var(--sand);
-    border-radius: 10px;
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    transition: var(--transition);
-    background: var(--cream);
+    border: 2px solid #F6E7D8;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background-color: #FDF6EE;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--sienna);
-    box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+    border-color: #C2410C;
 }
 
 .hours-table {
@@ -760,20 +754,19 @@ header {
 .hours-table td {
     padding: 0.8rem 1rem;
     text-align: left;
-    border-bottom: 1px solid var(--sand);
+    border-bottom: 1px solid #F6E7D8;
 }
 
 .hours-table th {
-    color: var(--sienna);
+    color: #C2410C;
     font-weight: 600;
 }
 
 .map-embed {
     margin-top: 3rem;
-    border-radius: 18px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(194, 65, 12, 0.1);
+    border: 2px solid #F6E7D8;
 }
 
 .map-embed iframe {
@@ -782,42 +775,50 @@ header {
     border: 0;
 }
 
-/* ---------- CTA Banner ---------- */
+
+/* =========================================================
+   CTA BANNER
+   ========================================================= */
+
 .cta-banner {
-    background: linear-gradient(135deg, var(--sienna), var(--terracotta));
-    color: #fff;
+    background-color: #C2410C;
+    color: white;
     text-align: center;
     padding: 4rem 2rem;
-    border-radius: 18px;
+    border-radius: 10px;
     margin-top: 4rem;
 }
 
 .cta-banner h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .cta-banner p {
     max-width: 600px;
     margin: 0 auto 2rem;
-    opacity: 0.95;
 }
 
 .cta-banner .btn-outline {
-    border-color: #fff;
-    color: #fff;
+    border-color: white;
+    color: white;
 }
 
 .cta-banner .btn-outline:hover {
-    background: #fff;
-    color: var(--sienna);
+    background-color: white;
+    color: #C2410C;
 }
 
-/* ---------- Footer ---------- */
+
+/* =========================================================
+   FOOTER
+   CSS GRID
+   ========================================================= */
+
 footer {
-    background: var(--walnut);
-    color: var(--cream);
-    padding: 3rem 0 1.5rem;
+    background-color: #3E2723;
+    color: #FDF6EE;
+    padding: 4rem 0 1.5rem;
     margin-top: 4rem;
 }
 
@@ -829,10 +830,10 @@ footer {
 }
 
 .footer-grid h4 {
-    font-family: var(--font-script);
-    font-size: 1.6rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
     font-weight: 400;
-    color: var(--terracotta);
+    color: #E2725B;
     margin-bottom: 1rem;
 }
 
@@ -845,25 +846,29 @@ footer {
 }
 
 .footer-grid ul a {
-    color: #d8c2ae;
-    transition: var(--transition);
+    color: #D8C2AE;
 }
 
 .footer-grid ul a:hover {
-    color: var(--terracotta);
-    padding-left: 4px;
+    color: #E2725B;
 }
 
 .footer-bottom {
     text-align: center;
-    border-top: 1px solid rgba(246, 231, 216, 0.15);
+    border-top: 1px solid rgba(246, 231, 216, 0.2);
     padding-top: 1.5rem;
-    font-size: 0.85rem;
-    color: #b3947f;
+    font-size: 1.3rem;
+    color: #B3947F;
 }
 
-/* ---------- Responsive ---------- */
+
+/* =========================================================
+   RESPONSIVE GRID
+   MAX WIDTH: 900px
+   ========================================================= */
+
 @media (max-width: 900px) {
+
     .hero-grid,
     .about-grid,
     .product-detail,
@@ -887,36 +892,75 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.4rem;
+        font-size: 3.5rem;
     }
 
     .hero h1 .script {
-        font-size: 2.8rem;
+        font-size: 4rem;
+    }
+
+    .hero-art {
+        order: -1;
     }
 }
 
+
+/* =========================================================
+   MOBILE
+   MAX WIDTH: 600px
+   ========================================================= */
+
 @media (max-width: 600px) {
-    .nav-links {
-        position: fixed;
-        top: 72px;
-        right: -100%;
-        flex-direction: column;
-        background: var(--cream);
-        width: 70%;
-        height: 100vh;
-        padding: 2rem;
-        gap: 1.5rem;
-        box-shadow: -6px 0 20px rgba(62, 39, 35, 0.15);
-        transition: right 0.3s ease;
+
+    body {
+        font-size: 1.5rem;
     }
 
-    .nav-links.open {
-        right: 0;
+    .container {
+        width: 94%;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    /* Navigation */
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+    }
+
+    .nav-links {
+        display: none;
     }
 
     .nav-toggle {
         display: block;
     }
+
+    /* Hero */
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero h1 .script {
+        font-size: 3.5rem;
+    }
+
+    .hero-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions .btn {
+        text-align: center;
+    }
+
+    /* Grids become one column */
 
     .services-grid,
     .reviews-grid,
@@ -927,19 +971,44 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    /* Product detail */
+
+    .product-detail {
+        grid-template-columns: 1fr;
     }
 
-    .hero h1 .script {
+    .detail-gallery {
+        padding: 2rem;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Typography */
+
+    .section-title {
         font-size: 2.4rem;
     }
 
-    .section-title {
-        font-size: 1.6rem;
+    .script {
+        font-size: 2.5rem;
     }
 
-    .script {
-        font-size: 2rem;
+    .pull-quote {
+        font-size: 2.3rem;
+        padding: 2rem;
+    }
+
+    /* Filter buttons */
+
+    .shop-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-btn {
+        width: 100%;
     }
 }
