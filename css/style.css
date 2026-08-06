@@ -690,6 +690,103 @@ header {
     line-height: 1.5;
     margin-top: 4rem;
 }
+/*==========================================
+ PRODUCT 
+ DETAIL PAGE 
+ =========================================  */
+ .product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.detail-gallery {
+    background: var(--sand);
+    border-radius: 18px;
+    padding: 3rem;
+    display: grid;
+    place-items: center;
+}
+
+.detail-gallery svg {
+    width: 100%;
+    max-width: 320px;
+}
+
+.detail-info h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-info .price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--sienna);
+    margin: 1rem 0;
+}
+
+.detail-info .desc {
+    color: #5a463a;
+    margin-bottom: 1.5rem;
+}
+
+.specs {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.specs li {
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed rgba(194, 65, 12, 0.3);
+    display: flex;
+    gap: 0.8rem;
+    align-items: baseline;
+}
+
+.specs li strong {
+    min-width: 110px;
+    color: var(--sienna);
+}
+
+.tabs {
+    margin-top: 2rem;
+}
+
+.tab-btns {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--sand);
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    padding: 0.6rem 1.2rem;
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    color: #8a6d58;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    color: var(--sienna);
+    border-bottom-color: var(--sienna);
+}
+
+.tab-panel {
+    display: none;
+    color: #5a463a;
+    font-size: 0.95rem;
+}
+
+.tab-panel.active {
+    display: block;
+}
 
 
 /* =========================================================
