@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Henna by Kamaldeep ~ Natural heena art studio. Bridal henna, festive designs, and henna products  handcrafted with love.">
+  <meta name="keywords" content="henna, mehndi, bridal henna, henna artist, kamaldeep, natural henna">
+  <meta name="author" content="Kamaldeep Kaur Grewal">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Henna by Kamaldeep ~Natural heena art studio">
+  <meta property="og:description" content="Handcrafted natural heena for your bridal, festive and everyday moments.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/home.svg">
+  <title>Henna by Kamaldeep | Natural Henna Art Studio</title>
+  <link rel="icon" type="images/svg+xml" href="images/home.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Henna by Kamaldeep logo">
+                Henna&nbsp;by&nbsp;Kamaldeep
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">&#9776;</button>
+            <nav>
+                <ul class="nav-links" id="navLinks"></ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </nav>
+        </div>
+    </header>
+<main>
+        <section class="section">
+            <div class="container product-detail">
+                <div class="detail-gallery">
+                    <img src="images/cone-bridal.svg" alt="Bridal Bliss henna cone">
+                </div>
+                <div class="detail-info">
+                    <a href="../shop.html">&larr; Back to shop</a>
+                    <h1>Mini <span class="script">Marigold</span></h1>
+                    <div class="price">$39</div>
+                    <p class="desc">A quick, simple henna design for everyday beauty, casual events or on your first henna experience.
+                        <li><strong>Duration:</strong> 30 min</li>
+                        <li><strong>Coverage:</strong> Single hand</li>
+                        <li><strong>Stain: </strong> Light-medium</li>
+                        <li><strong>Extras:</strong> Design Choices</li>
+                    </ul>
+                    <a href="../contact.html" class="btn btn-primary">Book This</a>
+
+                    <!-- Tabs -->
+                    <div class="tabs">
+                        <div class="tab-btns">
+                            <button class="tab-btn active" data-tab="details">Details</button>
+                            <button class="tab-btn" data-tab="care">Care</button>
+                            <button class="tab-btn" data-tab="reviews">Reviews</button>
+                        </div>
+                        <div class="tab-panel active" id="details">Mini marigold offers a selection of cute, compact designs applied to quickly to one hand.</div>
+                        <div class="tab-panel" id="care">Leave on for 3-4 hours for a lovely light stain.Moisturize to keep design vibrant.</div>
+                        <div class="tab-panel" id="reviews">Lovely little design for small get togather and parties.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+
+            <div>
+                <h4>Heena by Kamaldeep</h4>
+                <p>Handcrafted natural henna artistry for weddings, festivals, and every memorable moment.</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>Barrie, Ontario</li>
+                    <li>hello@heenabykamaldeep.ca</li>
+                    <li>(705) 555-0142</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Hours</h4>
+                <ul>
+                    <li>Mon - Fri: 10am - 6pm</li>
+                    <li>Sat: 10am - 8pm</li>
+                    <li>Sun: By Appointment</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Heena by Kamaldeep. All rights reserved. | Designed with love.</p>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+    function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+        }
+        // Tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+</script>
+</body>
+</html>
